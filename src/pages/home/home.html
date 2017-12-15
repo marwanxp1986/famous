@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle class="Ar">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>مشاهير للتسوق</ion-title>
+
+
+ 
+    
+  </ion-navbar>
+
+
+
+  
+</ion-header>
+
+
+<ion-content class="card-background-page"> 
+  
+  <ion-list [virtualScroll]="categorys">
+    <ion-item *virtualItem="let cat" no-lines>
+
+        <ion-card (click)="showtecipes(cat.id_category,cat.label)">
+         
+            <img class="card-img" src="assets/imgs/card.png"/>
+            <div class="card-title"><span class="card-title-cat">{{cat.label}}</span></div>
+      </ion-card>
+
+    </ion-item>
+  </ion-list>
+
+
+       
+
+        
+
+        
+       
+</ion-content>
